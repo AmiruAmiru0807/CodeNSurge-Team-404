@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> News Updates</title>
+    <link rel="icon" type="image/x-icon" href="logo.png ">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="news icon 2.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance  |</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics  |</li>
+                    <li class="hover-link nav-item" id="Sports" onclick="onNavItemClick('Sports')">Sports  |</li>
+                    <li class="hover-link nav-item" id="Health" onclick="onNavItemClick('Health')">Health  |</li>
+                    <li class="hover-link nav-item" id="Education " onclick="onNavItemClick('Education ')"> Education  </li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="search">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+            
+              
+        </div>
+    </nav>
+    
+    <div class="user-profile">
+        <h3>Welcome, <span id="user-name">Guest</span></h3>
+        <button id="login-button">Login</button>
+    </div>
+
+    
+    <div class="subscription-form">
+        <h3>Subscribe to our Newsletter</h3>
+        <input type="email" id="subscribe-email" placeholder="Enter your email">
+        <button id="subscribe-button">Subscribe</button>
+    </div>
+    <div class="weather">
+        <h2>weather</h2>
+
+       <h4>Location:</h4>
+        <h4>Temperature:</h4>
+        
+    </div>
+
+    
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+                <button class="bookmark-button">Bookmark</button>
+
+                
+                <div class="social-share">
+                    <button class="share-button" data-platform="facebook">Share on Facebook</button>
+                    <button class="share-button" data-platform="twitter">Share on Twitter</button>
+                </div>
+
+                
+                <div class="comments-section">
+                    <input type="text" class="comment-input" placeholder="Add a comment">
+                    <button class="add-comment-button">Comment</button>
+                    <ul class="comments-list"></ul>
+                </div>
+                <div class="voice">
+                    <button onclick="readNews()">Read News Aloud</button>
+
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
